@@ -62,6 +62,5 @@ systemctl enable -q --now nightscout
 msg_ok "Created Service"
 
 motd_ssh
-app="nightscout"
 customize
 cleanup_lxc
