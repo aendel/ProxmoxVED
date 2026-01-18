@@ -184,17 +184,17 @@ variables() {
 # - Initialize error traps after loading
 # ------------------------------------------------------------------------------
 
-source <(curl -fsSL https://git.community-scripts.org/community-scripts/ProxmoxVED/raw/branch/main/misc/api.func)
+source <(curl -fsSL https://raw.githubusercontent.com/aendel/ProxmoxVED/test/nightscout-local/misc/api.func)
 
 if command -v curl >/dev/null 2>&1; then
-  source <(curl -fsSL https://git.community-scripts.org/community-scripts/ProxmoxVED/raw/branch/main/misc/core.func)
-  source <(curl -fsSL https://git.community-scripts.org/community-scripts/ProxmoxVED/raw/branch/main/misc/error_handler.func)
+  source <(curl -fsSL https://raw.githubusercontent.com/aendel/ProxmoxVED/test/nightscout-local/misc/core.func)
+  source <(curl -fsSL https://raw.githubusercontent.com/aendel/ProxmoxVED/test/nightscout-local/misc/error_handler.func)
   load_functions
   catch_errors
   #echo "(build.func) Loaded core.func via curl"
 elif command -v wget >/dev/null 2>&1; then
-  source <(wget -qO- https://git.community-scripts.org/community-scripts/ProxmoxVED/raw/branch/main/misc/core.func)
-  source <(wget -qO- https://git.community-scripts.org/community-scripts/ProxmoxVED/raw/branch/main/misc/error_handler.func)
+  source <(wget -qO- https://raw.githubusercontent.com/aendel/ProxmoxVED/test/nightscout-local/misc/core.func)
+  source <(wget -qO- https://raw.githubusercontent.com/aendel/ProxmoxVED/test/nightscout-local/misc/error_handler.func)
   load_functions
   catch_errors
   #echo "(build.func) Loaded core.func via wget"
